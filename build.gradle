@@ -24,6 +24,12 @@ allprojects {
     }
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.activity:activity-ktx:1.5.1'
+    }
+}
+
 task clean(type: Delete) {
 	delete rootProject.buildDir
 }
