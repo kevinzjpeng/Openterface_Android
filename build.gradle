@@ -8,7 +8,8 @@ buildscript {
 		mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.0.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
     }
 }
 
@@ -21,6 +22,15 @@ allprojects {
 
 		google()
 		mavenCentral()
+    }
+
+    configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'org.jetbrains.kotlin') {
+                details.useVersion '1.9.22'
+                details.because 'Align Kotlin stdlib versions to prevent conflicts'
+            }
+        }
     }
 }
 

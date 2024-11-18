@@ -22,6 +22,7 @@
  */
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion versionCompiler
@@ -60,6 +61,7 @@ android {
     }
     lintOptions {
         baseline file("lint-baseline.xml")
+        disable 'HardcodedText', 'UnusedResources'
     }
 }
 
@@ -71,6 +73,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.annotation:annotation:1.6.0'
     implementation 'cn.hutool:hutool-core:5.6.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.22"
 }
 
 ext {
@@ -87,4 +90,4 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
 }
 
-//apply from: "../publish_aar.gradle"
+apply from: "../publish_aar.gradle"
