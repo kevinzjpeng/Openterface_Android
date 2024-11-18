@@ -29,6 +29,9 @@ jobs:
     - name: Clean Gradle
       run: ./gradlew clean
 
+    - name: Gradle dependencies
+      run: ./gradlew :app:dependencies
+
     - name: Build with Gradle
       run: ./gradlew build
 
