@@ -36,15 +36,15 @@ dependencies {
     // USB serial communication library
     implementation 'com.github.mik3y:usb-serial-for-android:3.8.0'
     // AndroidX AppCompat library for backward compatibility
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     // Google Material Design components
     implementation 'com.google.android.material:material:1.10.0'
     // AndroidX ConstraintLayout for complex layouts
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     // AndroidX Navigation component for fragment navigation
-    implementation 'androidx.navigation:navigation-fragment:2.7.7'
+    implementation 'androidx.navigation:navigation-fragment:2.8.4'
     // AndroidX Navigation framework
-    implementation 'androidx.navigation:navigation-ui:2.7.7'
+    implementation 'androidx.navigation:navigation-ui:2.8.4'
     // Google Gson library for JSON serialization/deserialization
     implementation 'com.google.code.gson:gson:2.10.1'
     // Permission request framework
