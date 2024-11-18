@@ -28,8 +28,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 artifactId = artifact
-                from components.release
-//                artifact javadocJar
+                from components.findByName("release")
                 artifact sourcesJar
                 pom {
                     name = artifact
